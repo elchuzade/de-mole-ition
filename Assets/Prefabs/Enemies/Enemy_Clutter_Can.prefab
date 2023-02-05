@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935583297441852015}
   - component: {fileID: 1935583297441852014}
-  - component: {fileID: 1935583297441852013}
+  - component: {fileID: 5089680802408322341}
   - component: {fileID: -5428311071096553396}
   - component: {fileID: 4261987662272504110}
   m_Layer: 0
@@ -88,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &1935583297441852013
-CapsuleCollider2D:
+--- !u!60 &5089680802408322341
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101,9 +101,29 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: -0.01}
-  m_Size: {x: 0.24, y: 0.39}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.1328125, y: 0.1640625}
+      - {x: 0.125, y: 0.1953125}
+      - {x: -0.078125, y: 0.1953125}
+      - {x: -0.125, y: 0.1640625}
+      - {x: -0.125, y: -0.1953125}
+      - {x: -0.046875, y: -0.2265625}
+      - {x: 0.0703125, y: -0.2265625}
+      - {x: 0.1171875, y: -0.21875}
+      - {x: 0.1484375, y: -0.1640625}
+      - {x: 0.1484375, y: -0.046875}
+      - {x: 0.140625, y: 0.0390625}
 --- !u!114 &-5428311071096553396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a80314607cc4953964cd234755a934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageParticle: {fileID: 0}
   health: 100
-  armor: 1
+  armor: 0.4
   type: 0
 --- !u!114 &4261987662272504110
 MonoBehaviour:

@@ -19,6 +19,6 @@ public class RootEnd : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("coll");
+        transform.parent.GetComponent<Tree>().DestroyTree();
     }
 }

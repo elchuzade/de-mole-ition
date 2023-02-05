@@ -24,6 +24,9 @@ public class Obstacle : MonoBehaviour
         if (type == Obstacles.Pipe)
         {
             GetComponent<Pipe>().DestroyPipe();
+        } else if (type == Obstacles.Trash)
+        {
+            GetComponent<Trash>().DestroyTrash();
         } else
         {
             Destroy(gameObject);

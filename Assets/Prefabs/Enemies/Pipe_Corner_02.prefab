@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a80314607cc4953964cd234755a934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageParticle: {fileID: 0}
   health: 100
   armor: 1
   type: 0

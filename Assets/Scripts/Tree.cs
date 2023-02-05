@@ -31,9 +31,6 @@ public class Tree : MonoBehaviour
     {
         rootTipPosition = treeSpline.nodes[treeSpline.nodes.Count - 1].Position;
         rootEnd.nextPosition = rootTipPosition;
-
-        InvokeRepeating("CreateNewBranch", 0.1f, 0.1f);
-        Invoke("StartGrowingRoots", 1);
     }
 
     void Update()
@@ -122,6 +119,8 @@ public class Tree : MonoBehaviour
 
     public void StartGrowingRoots()
     {
+        InvokeRepeating("CreateNewBranch", 0.1f, 0.1f);
+        Invoke("StartGrowingRoots", 1);
         growRoots = true;
     }
 

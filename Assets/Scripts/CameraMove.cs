@@ -21,7 +21,7 @@ public class CameraMove : MonoBehaviour
         {
             transform.RotateAround(Camera.main.transform.position, Vector3.forward, 200 * Time.deltaTime);
         }
-        else if (Camera.main.transform.position.y < 0.6 && liftCamera) {
+        else if (Camera.main.transform.position.y < 0 && liftCamera) {
             transform.position += new Vector3(0, 0.1f, 0);
         }
         else

@@ -25,5 +25,10 @@ public class RootEnd : MonoBehaviour
             transform.parent.GetComponent<Tree>().DestroyTree();
             gameManager.GameOver();
         }
+        if (collision.gameObject.tag == "Finish")
+        {
+            transform.parent.GetComponent<Tree>().WinTree();
+            gameManager.Win();
+        }
     }
 }

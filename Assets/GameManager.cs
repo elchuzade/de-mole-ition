@@ -136,6 +136,13 @@ public class GameManager : MonoBehaviour
         deathSound.SetActive(true);
     }
 
+    public void DisableSounds()
+    {
+        startSound.SetActive(false);
+        gameSound.SetActive(false);
+        deathSound.SetActive(false);
+    }
+
     public void GameOver()
     {
         mole.SetActive(false);
@@ -146,8 +153,15 @@ public class GameManager : MonoBehaviour
 
     public void ClickRestartGame()
     {
-        Debug.Log("test");
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void Win()
+    {
+        mole.SetActive(false);
+        joystickCanvas.SetActive(false);
+        ShowSuccessCanvas();
+        DisableSounds();
     }
 
     IEnumerator StartGameMusic()

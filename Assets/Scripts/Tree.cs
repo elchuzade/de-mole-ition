@@ -124,6 +124,12 @@ public class Tree : MonoBehaviour
         growRoots = true;
     }
 
+    public void WinTree()
+    {
+        cameraMove.moveCamera = false;
+        growRoots = false;
+    }
+
     public void DestroyTree()
     {
         cameraMove.moveCamera = false;

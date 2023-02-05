@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RootEnd : MonoBehaviour
 {
+    public GameManager gameManager;
     public Vector2 nextPosition;
     public float moveSpeed = 1;
 
@@ -19,6 +20,10 @@ public class RootEnd : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        transform.parent.GetComponent<Tree>().DestroyTree();
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            transform.parent.GetComponent<Tree>().DestroyTree();
+            gameManager.GameOver();
+        }
     }
 }

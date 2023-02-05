@@ -20,7 +20,7 @@ public class Tree : MonoBehaviour
     float topLimit = 4;
     float bottomLimit = -2;
 
-    bool growRoots = false;
+    public bool growRoots = false;
     bool shrinkTree = false;
 
     Vector2 rootTipPosition;
@@ -85,7 +85,7 @@ public class Tree : MonoBehaviour
         Vector2 nextNodePosition = GetNewCoordinate(rootTipPosition);
 
         rootTipPosition = nextNodePosition;
-        rootEnd.nextPosition = nextNodePosition + new Vector2(-6, 0); // Make tree end move towards the next node position
+        rootEnd.nextPosition = nextNodePosition + new Vector2(-3.1f, 0.3f); // Make tree end move towards the next node position
 
         SplineNode nextNode = new SplineNode(new Vector3(nextNodePosition.x, nextNodePosition.y, 0), Vector3.zero);
         treeSpline.AddNode(nextNode);
@@ -112,7 +112,7 @@ public class Tree : MonoBehaviour
 
     public void CreateLeaf(int leafDirection)
     {
-        GameObject leaf = Instantiate(leafPrefab, rootTipPosition - new Vector2(6,0), Quaternion.identity);
+        GameObject leaf = Instantiate(leafPrefab, rootTipPosition + new Vector2(-3.1f,0.3f), Quaternion.identity);
         leaf.transform.SetParent(transform);
         leaf.GetComponent<Leaf>().Initialize(leafDirection);
     }
@@ -120,7 +120,7 @@ public class Tree : MonoBehaviour
     public void StartGrowingRoots()
     {
         InvokeRepeating("CreateNewBranch", 0.1f, 0.1f);
-        Invoke("StartGrowingRoots", 1);
+
         growRoots = true;
     }
 

@@ -8,7 +8,7 @@ public class Leaf : MonoBehaviour
 
     void Start()
     {
-        Invoke("DeastroyLeaf", 2);
+        Invoke("DestroyLeaf", 2);
     }
 
     void Update()
